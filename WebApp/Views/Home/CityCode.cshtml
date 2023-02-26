@@ -1,0 +1,18 @@
+@model ICityWeather
+
+<div class="container">
+    @if (Model != null)
+    {
+        <div class="city">
+            <div class="city-name">@Model.CityName</div>
+            <div class="weather-time">@Model.DateAndTime.ToString("HH:mm tt",
+            System.Globalization.CultureInfo.InvariantCulture)</div>
+            <div class="weather-degree">@Model.TemperatureFahrenheit &#176;F</div>
+            <div><a href="/">Home</a></div>
+        </div>
+    }
+    else
+    {
+        <div>The city ID is wrong</div>
+    }
+</div>

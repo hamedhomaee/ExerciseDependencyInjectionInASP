@@ -1,0 +1,11 @@
+@model List<ICityWeather>
+
+<div class="container">
+    @foreach (ICityWeather item in Model)
+    {
+        @await Component.InvokeAsync("CityWeather", new 
+            { 
+                ViewComponentModel = item 
+            });
+    }
+<div>

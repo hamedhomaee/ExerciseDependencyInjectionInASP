@@ -1,0 +1,9 @@
+@model ICityWeather
+
+<div class="city">
+    <div class="city-name">@Model.CityName</div>
+    <div class="weather-time">@Model.DateAndTime.ToString("HH:mm tt",
+        System.Globalization.CultureInfo.InvariantCulture)</div>
+    <div class="weather-degree">@Model.TemperatureFahrenheit &#176;F</div>
+    <div><a href="weather/@Model.CityUniqueCode">Details</a></div>
+</div>
